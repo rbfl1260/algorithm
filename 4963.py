@@ -1,4 +1,4 @@
-#섬의 개수
+#섬의 개수 문제
 from collections import deque
 
 queue=[]
