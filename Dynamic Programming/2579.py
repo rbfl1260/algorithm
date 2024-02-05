@@ -15,13 +15,4 @@ dp[3]=max(dp[1]+score[3],dp[2]+score[3])
 for i in range(4,stair+1):
     dp[i]=max(dp[i-3]+score[i-1]+score[i],dp[i-2]+score[i])
     #이전칸을 밟냐,안밟냐에 따라서 정해짐.
-    # c+=1
-    # dp[i]=dp[i-1]+score[i]
-    # if i>2:
-    #     if c==3:
-    #         dp[i]=dp[i-2]+score[i]
-    #         c=0
-    #     else:
-    #         dp[i]=max(dp[i],dp[i-2]+score[i])
-    # print(i,dp[i])
 print(dp[stair])
