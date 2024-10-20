@@ -23,4 +23,4 @@ for i in range(n):
         print(1 if not stack else 0)
     
     else:
-        print(stack[-1] if stack else 0)
+        print(stack[-1] if stack else -1)
