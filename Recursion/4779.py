@@ -1,19 +1,33 @@
 #칸토어 집합
-
 import sys
-from collections import deque
 
-n=int(sys.stdin.readline()) #자료구조의 개수
-a=list(map(int,sys.stdin.readline().split()))
-b=list(map(int,sys.stdin.readline().split()))
-m=int(sys.stdin.readline())
-c=list(map(int,sys.stdin.readline().split()))
+def Div(arr):
+    if len(arr)==1:
+        return arr
+    val=len(arr)//3
+    empty=arr[val:val+val]
+    left=arr[:val]
+    right=arr[val+val:]
+    L=Div(left)
+    R=Div(right)
+    return Cantor(L,R,empty)
 
-queue=deque()
+def Cantor(left,right,empty):
+    res=[]
+    for i in range(len(empty)):
+        empty[i]=' '
+    res=left+empty+right
+    return res
+    
 
-for i in range(n):
-    if a[i]==0:
-        queue.append(b[i])
-for i in range(m):
-    queue.appendleft(c[i])
-    print(queue.pop(),end= ' ')
+while True:
+    n=sys.stdin.readline().strip()
+    if n:
+        n=int(n)
+        count=3**n
+        arr=[]
+        for i in range(count):
+            arr.append('-')
+        print(''.join(map(str,Div(arr))))
+    else:
+        break
