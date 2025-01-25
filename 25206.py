@@ -1,6 +1,6 @@
 #너의 평점은
 
-totalLevel=0.0
+totalGrade=0.0
 totalCredit=0.0
 grade_to_point = {
     'A+': 4.5, 'A0': 4.0,
@@ -11,12 +11,11 @@ grade_to_point = {
 }
 
 for _ in range(20):
-    subject, credit, level=input().split()
+    subject, credit, grade=input().split()
     credit=float(credit)
-
-    if level=='P':
+    if grade=='P':
         continue
     totalCredit+=credit
-    totalLevel+=grade_to_point[level]*credit
+    totalGrade+=grade_to_point[grade]*credit
 
-print(totalLevel/totalCredit)
+print(totalGrade/totalCredit)
