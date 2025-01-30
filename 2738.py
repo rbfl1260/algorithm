@@ -3,6 +3,7 @@
 n,m=map(int,input().split())
 
 data=[list(map(int,input().split())) for _ in range(2*n)]
+print(data)
 
 A=data[:n]
 B=data[n:]
