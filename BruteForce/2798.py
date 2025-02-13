@@ -16,6 +16,7 @@ maxVal=0
 #             if sum_cards<=m:
 #                 maxVal=max(maxVal,sum_cards)
 
+#조합활용
 for combination in combinations(cards,3):
     total=sum(combination)
     if total<=m:

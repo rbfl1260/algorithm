@@ -5,7 +5,7 @@
 # s2=[]
 # for i in range(len(s1)):
 #     s1[i].append(s1[i][1]-s1[i][0])
-# s1.sort(key=lambda x:(x[2],x[0]))
+# s1.sort(=lambda x:(x[2],x[0]))
 # j=0
 # c=0
 # s3=[]

@@ -6,10 +6,10 @@ a1,a0=map(int,input().split())
 c=int(input())
 n0=int(input())
 n=n0
-f_n=a1*n+a0
-g_n=n
-res=2
+res=1
 while n0<=n<=100:
+    f_n=a1*n+a0
+    g_n=n
     if f_n>c*g_n:
         res=0
         break
