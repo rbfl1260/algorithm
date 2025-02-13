@@ -8,6 +8,7 @@ cards=list(map(int,input().split()))
 
 maxVal=0
 
+#for문으로 직접 생성
 # for i in range(n):
 #     for j in range(i+1,n):
 #         for k in range(j+1,n):
