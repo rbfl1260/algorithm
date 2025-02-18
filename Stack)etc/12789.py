@@ -12,8 +12,6 @@ waitingNum=1
 for x in nums:
     stack.append(x)
     while stack and stack[-1] ==waitingNum:
-        print(stack)
-        print(stack[-1])
         stack.pop()
         waitingNum+=1
 if not stack:
