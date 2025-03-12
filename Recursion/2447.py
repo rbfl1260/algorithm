@@ -24,5 +24,5 @@ all=[[' ']*n for _ in range(n)]
 Recursion(n,0,0,all)
 
 for row in all:
-    print(*row)
+    print("".join(row))
 
