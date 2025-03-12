@@ -1,17 +1,17 @@
 #알고리즘 수업 - 병합 정렬 1
 import sys
 
-def merge_sort(arr,count):
+def merge_sort(arr,count,k):
     if len(arr)<=1:
         return arr,count
-    mid=len(arr)//2
+    mid=(len(arr)+1)//2
     left=arr[:mid]
     right=arr[mid:]
-    LEFT,count=merge_sort(left,count)
-    RIGHT,count=merge_sort(right,count)
-    return merge(LEFT,RIGHT,count)
+    LEFT,count=merge_sort(left,count,k)
+    RIGHT,count=merge_sort(right,count,k)
+    return merge(LEFT,RIGHT,count,k)
 
-def merge(left,right,count):
+def merge(left,right,count,k):
     i,j=0,0
     sorted_list=[]
     
@@ -30,7 +30,6 @@ def merge(left,right,count):
             if count==k:
                 print(right[j])
                 return sorted_list, count
-
             j+=1
     while i<len(left):
         sorted_list.append(left[i])
@@ -51,6 +50,6 @@ def merge(left,right,count):
 n,k=map(int,sys.stdin.readline().split())
 numbers = list(map(int,sys.stdin.readline().split()))
 count=0
-sorted_list,count=merge_sort(numbers,count)
+sorted_list,count=merge_sort(numbers,count,k)
 if count<k:
     print(-1)
