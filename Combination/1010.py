@@ -1,4 +1,4 @@
-#다리 
+#다리 놓기
 
 import math
 
